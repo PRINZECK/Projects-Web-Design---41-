@@ -35,26 +35,26 @@
   </ul>
   <h2>Лабораторная работа №3</h2>
   <ul>
-    <li><a href="3/index1.html">Задание </a></li>
-    <li><a href="3/index2.html">Задание </a></li>
-    <li><a href="3/index3.html">Задание </a></li>
-    <li><a href="3/index4.html">Задание </a></li>
-    <li><a href="3/index5.html">Задание </a></li>
-    <li><a href="3/index6.html">Задание </a></li>
-    <li><a href="3/index7.html">Задание </a></li>
-    <li><a href="3/index8.html">Задание </a></li>
-    <li><a href="3/index9.html">Задание </a></li>
+    <li><a href="3/index1.html">Задание 1</a></li>
+    <li><a href="3/index2.html">Задание 2</a></li>
+    <li><a href="3/index3.html">Задание 3</a></li>
+    <li><a href="3/index4.html">Задание 4</a></li>
+    <li><a href="3/index5.html">Задание 5</a></li>
+    <li><a href="3/index6.html">Задание 6</a></li>
+    <li><a href="3/index7.html">Задание 7</a></li>
+    <li><a href="3/index8.html">Задание 8</a></li>
+    <li><a href="3/index9.html">Задание 9</a></li>
     <li><a href="3/linking-to-other-pages.html">Задание </a></li>
   </ul>  
   <h2>Лабораторная работа №4</h2>
   <ul>
-    <li><a href="4/index1.html">Задание </a></li>
-    <li><a href="4/index2.html">Задание </a></li>
-    <li><a href="4/index3.html">Задание </a></li>
-    <li><a href="4/index4.html">Задание </a></li>
-    <li><a href="4/index5.html">Задание </a></li>
-    <li><a href="4/index6.html">Задание </a></li>
-    <li><a href="4/index7.html">Задание </a></li>
+    <li><a href="4/index1.html">Задание 1</a></li>
+    <li><a href="4/index2.html">Задание 2</a></li>
+    <li><a href="4/index3.html">Задание 3</a></li>
+    <li><a href="4/index4.html">Задание 4</a></li>
+    <li><a href="4/index5.html">Задание 5</a></li>
+    <li><a href="4/index6.html">Задание 6</a></li>
+    <li><a href="4/index7.html">Задание 7</a></li>
   </ul>
   <h2>Лабораторная работа №5</h2>
   <ul>
