@@ -104,45 +104,45 @@
   </ul>
   <h2>Лабораторная работа №7</h2>
   <ul>
-    <li><a href="7/index1.html">Задание 1</a></li>
-    <li><a href="7/index2.html">Задание 2</a></li>
-    <li><a href="7/index3.html">Задание 3</a></li>
+    <li><a href="7(1)/1.html">Задание 1</a></li>
+    <li><a href="7(1)/2.html">Задание 2</a></li>
+    <li><a href="7(1)/3.html">Задание 3</a></li>
   </ul>
   <h2>Задания №7.1</h2>
   <ul>
-    <li><a href="7.1/index.html">Задание </a></li>
+    <li><a href="7.1(2)/.html">Задание </a></li>
   </ul>
   <h2>Задания №7.2</h2>
   <ul>
-    <li><a href="7.2/index.html">Задание </a></li>
+    <li><a href="7.2(3)/.html">Задание </a></li>
   </ul>
   <h2>Задания №7.3</h2>
   <ul>
-    <li><a href="7.3/index.html">Задание </a></li>
+    <li><a href="7.3(4)/.html">Задание </a></li>
   </ul>
   <h2>Задания №7.4</h2>
   <ul>
-    <li><a href="7.4/index.html">Задание </a></li>
+    <li><a href="7.4(5)/.html">Задание </a></li>
   </ul>
   <h2>Задания №7.5</h2>
   <ul>
-    <li><a href="7.5/index.html">Задание </a></li>
+    <li><a href="7.5(6)/.html">Задание </a></li>
   </ul>
   <h2>Задания №7.6</h2>
   <ul>
-    <li><a href="7.6/index.html">Задание </a></li>
+    <li><a href="7.6(7)/.html">Задание </a></li>
   </ul>
   <h2>Задания №7.7</h2>
   <ul>
-    <li><a href="7.7/index.html">Задание </a></li>
+    <li><a href="7.7(8)/.html">Задание </a></li>
   </ul>
   <h2>Задания №7.8</h2>
   <ul>
-    <li><a href="7.8/index.html">Задание </a></li>
+    <li><a href="7.8(9)/.html">Задание </a></li>
   </ul>
   <h2>Задания №7.9</h2>
   <ul>
-    <li><a href="7.9/index.html">Задание </a></li>
+    <li><a href="7.9(1)/.html">Задание </a></li>
   </ul>
   <h2>Лабораторная работа №8(1)</h2>
   <ul>
