@@ -44,7 +44,7 @@
     <li><a href="3/index7.html">Задание 7</a></li>
     <li><a href="3/index8.html">Задание 8</a></li>
     <li><a href="3/index9.html">Задание 9</a></li>
-    <li><a href="3/linking-to-other-pages.html">Задание </a></li>
+    <li><a href="3/linking-to-other-pages.html">Подпись (моя)</a></li>
   </ul>  
   <h2>Лабораторная работа №4</h2>
   <ul>
