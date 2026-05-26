@@ -146,19 +146,19 @@
   </ul>
   <h2>Лабораторная работа №8(1)</h2>
   <ul>
-    <li><a href="8(1)/index1.html">Задание 1</a></li>
-    <li><a href="8(1)/index2.html">Задание 2</a></li>
-    <li><a href="8(1)/index3.html">Задание 3</a></li>
-    <li><a href="8(1)/index4.html">Задание 4</a></li>
-    <li><a href="8(1)/index5.html">Задание 5</a></li>
-    <li><a href="8(1)/index6.html">Задание 6</a></li>
-    <li><a href="8(1)/index7.html">Задание 7</a></li>
-    <li><a href="8(1)/index8.html">Задание 8</a></li>
-    <li><a href="8(1)/index9.html">Задание 9</a></li>
-    <li><a href="8(1)/index10.html">Задание 10</a></li>
-    <li><a href="8(1)/index11.html">Задание 11</a></li>
-    <li><a href="8(1)/index12.html">Задание 12</a></li>
-    <li><a href="8(1)/index13.html">Задание 13</a></li>
+    <li><a href="8(1)/1.html">Задание 1</a></li>
+    <li><a href="8(1)/2.html">Задание 2</a></li>
+    <li><a href="8(1)/3.html">Задание 3</a></li>
+    <li><a href="8(1)/4.html">Задание 4</a></li>
+    <li><a href="8(1)/5.html">Задание 5</a></li>
+    <li><a href="8(1)/6.html">Задание 6</a></li>
+    <li><a href="8(1)/7.html">Задание 7</a></li>
+    <li><a href="8(1)/8.html">Задание 8</a></li>
+    <li><a href="8(1)/9.html">Задание 9</a></li>
+    <li><a href="8(1)/10.html">Задание 10</a></li>
+    <li><a href="8(1)/11.html">Задание 11</a></li>
+    <li><a href="8(1)/12.html">Задание 12</a></li>
+    <li><a href="8(1)/13.html">Задание 13</a></li>
   </ul>
   <h2>Лабораторная работа №9</h2>
   <ul>
