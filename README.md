@@ -80,27 +80,27 @@
   </ul>
     <h2>Лабораторная работа №6</h2>
   <ul>
-    <li><a href="6/index1.html">Задание 1</a></li>
-    <li><a href="6/index2.html">Задание 2</a></li>
-    <li><a href="6/index3.html">Задание 3</a></li>
-    <li><a href="6/index4.html">Задание 4</a></li>
-    <li><a href="6/index5.html">Задание 5</a></li>
-    <li><a href="6/index6.html">Задание 6</a></li>
-    <li><a href="6/index7.html">Задание 7</a></li>
-    <li><a href="6/index8.html">Задание 8</a></li>
-    <li><a href="6/index9.html">Задание 9</a></li>
-    <li><a href="6/index10.html">Задание 10</a></li>
-    <li><a href="6/index11.html">Задание 11</a></li>
-    <li><a href="6/index12.html">Задание 12</a></li>
-    <li><a href="6/index13.html">Задание 13</a></li>
-    <li><a href="6/index14.html">Задание 14</a></li>
-    <li><a href="6/index15.html">Задание 15</a></li>
-    <li><a href="6/index16.html">Задание 16</a></li>
-    <li><a href="6/index17.html">Задание 17</a></li>
-    <li><a href="6/index18.html">Задание 18</a></li>
-    <li><a href="6/index19.html">Задание 19</a></li>
-    <li><a href="6/index20.html">Задание 20</a></li>
-    <li><a href="6/index21.html">Задание 21</a></li>
+    <li><a href="6/1.html">Задание 1</a></li>
+    <li><a href="6/2.html">Задание 2</a></li>
+    <li><a href="6/3.html">Задание 3</a></li>
+    <li><a href="6/4.html">Задание 4</a></li>
+    <li><a href="6/5.html">Задание 5</a></li>
+    <li><a href="6/6.html">Задание 6</a></li>
+    <li><a href="6/7.html">Задание 7</a></li>
+    <li><a href="6/8.html">Задание 8</a></li>
+    <li><a href="6/9.html">Задание 9</a></li>
+    <li><a href="6/10.html">Задание 10</a></li>
+    <li><a href="6/11.html">Задание 11</a></li>
+    <li><a href="6/12.html">Задание 12</a></li>
+    <li><a href="6/13.html">Задание 13</a></li>
+    <li><a href="6/14.html">Задание 14</a></li>
+    <li><a href="6/15.html">Задание 15</a></li>
+    <li><a href="6/16.html">Задание 16</a></li>
+    <li><a href="6/17.html">Задание 17</a></li>
+    <li><a href="6/18.html">Задание 18</a></li>
+    <li><a href="6/19.html">Задание 19</a></li>
+    <li><a href="6/20.html">Задание 20</a></li>
+    <li><a href="6/21.html">Задание 21</a></li>
   </ul>
   <h2>Лабораторная работа №7</h2>
   <ul>
