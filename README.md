@@ -146,7 +146,7 @@
   </ul>
   <h2>Лабораторная работа №8(1)</h2>
   <ul>
-    <li><a href="8(1)/index1.html">Задание </a></li>
+    <li><a href="8(1)/index1.html">Задание 1</a></li>
     <li><a href="8(1)/index2.html">Задание 2</a></li>
     <li><a href="8(1)/index3.html">Задание 3</a></li>
     <li><a href="8(1)/index4.html">Задание 4</a></li>
