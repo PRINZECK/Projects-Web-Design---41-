@@ -2,70 +2,111 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Макет HTML5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Кофейня Coffee Travelers — Главная</title>
     <style>
-        header, section, footer, aside, nav, article, figure, figcaption {
+        /* Сброс базовых стилей и улучшение рендеринга */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Современная инициализация для старых элементов */
+        header, section, footer, aside, nav, article, figure, figcaption, main, hgroup {
             display: block;
         }
+
         body {
             color: #666666;
-            background-color: f9f8f6;
+            background-color: #f9f8f6;      /* исправлено f9f8f6 → #f9f8f6 */
             background-image: url("images/dark-wood.jpg");
-            background-position: center;
-            font-family: Georgia, Times, serif;
-            line-height: 1.4em;
-            marin: 0px;
+            background-position: center center;
+            background-repeat: repeat;        /* реалистичное поведение фона */
+            background-size: auto;
+            font-family: Georgia, Times, 'Times New Roman', serif;
+            line-height: 1.5em;              /* чуть более современный интерлиньяж */
+            margin: 0;
+            padding: 20px 0;                 /* отступы от краёв окна */
         }
+
         .wrapper {
             width: 940px;
-            marin: 20px auto 20px auto;
+            margin: 0 auto;                   /* исправлено marin → margin */
             border: 2px solid #000000;
             background-color: #ffffff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* лёгкая тень для современности */
         }
+
         header {
             height: 160px;
-            background-image: url(images/header.jpg);
+            background-image: url('images/header.jpg');
+            background-size: cover;
+            background-position: center;
         }
+
         h1 {
             text-indent: -9999px;
             width: 940px;
             height: 130px;
-            margin: 0px;
+            margin: 0;
+            /* декоративный элемент, скрыт визуально, но доступен для скринридеров */
         }
+
         nav, footer {
             clear: both;
             color: #ffffff;
             background-color: #aeaca8;
-            height: 30px;
+            height: auto;                    /* вместо фикс 30px — адаптивно */
+            min-height: 30px;
         }
+
         nav ul {
-            margin: 0px;
-            padding: 5px 0px 5px 30px;
+            margin: 0;
+            padding: 8px 0 8px 30px;         /* вертикальные отступы удобнее */
+            list-style: none;
         }
+
         nav li {
-            display: inline;
+            display: inline-block;            /* современнее, чем inline */
             margin-right: 40px;
         }
-        navli a {
+
+        /* исправлено: navli a → nav li a */
+        nav li a {
             color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
         }
+
         nav li a:hover, nav li a.current {
             color: #000000;
         }
+
+        /* главный контент — семантически верно */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         section.courses {
-            float: left;
+            float: left;                     /* сохранена старая флоат-модель, но с clearfix */
             width: 659px;
             border-right: 1px solid #eeeeee;
         }
+
         article {
             clear: both;
             overflow: auto;
             width: 100%;
+            padding: 0 10px;
         }
+
         hgroup {
             margin-top: 40px;
         }
+
         figure {
             float: left;
             width: 200px;
@@ -73,103 +114,184 @@
             padding: 5px;
             margin: 20px;
             border: 1px solid #eeeeee;
+            background-color: #fff;
+            text-align: center;
         }
-        figcaption: {
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;              /* аккуратно вписывает изображение */
+        }
+
+        /* исправлено: figcaption: → figcaption */
+        figcaption {
             font-size: 90%;
             text-align: left;
+            margin-top: 5px;
+            color: #777;
         }
+
         aside {
             width: 230px;
             float: left;
-            padding: 0px 0px 0px 20px;
+            padding: 0 0 0 20px;
         }
+
+        /* исправлен border-bottom */
         aside section a {
             display: block;
             padding: 10px;
-            border-bottom 1px solid #eeeeee;
+            border-bottom: 1px solid #eeeeee;
+            transition: all 0.2s;
         }
+
         aside section a:hover {
             color: #985d6a;
             background-color: #efefef;
         }
+
         a {
             color: #de6581;
             text-decoration: none;
         }
-        h1, h2, h3, {
+
+        /* убираем лишнюю запятую после h3 */
+        h1, h2, h3 {
             font-weight: normal;
         }
+
         h2 {
-            margin: 10px 0px 5px 0px;
-            padding: 0px;
+            margin: 10px 0 5px 0;
+            padding: 0;
         }
+
         h3 {
-            margin: 10px 0px 10px 0px;
-            color: #de6581
+            margin: 10px 0 10px 0;
+            color: #de6581;
         }
+
         aside h2 {
-            padding: 30px 0px 10px 0px;
-            color: #de6581
+            padding: 30px 0 10px 0;
+            color: #de6581;
         }
+
         footer {
             font-size: 80%;
-            padding: 7px 0px 0px 20px;
+            padding: 10px 0 10px 20px;
+            background-color: #aeaca8;
+            color: #ffffff;
+            clear: both;
+        }
+
+        /* clearfix для поддержки float без flex, хотя мы добавили main с flex */
+        .wrapper::after, .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* адаптив для маленьких экранов (сохраняя старую структуру) */
+        @media (max-width: 960px) {
+            .wrapper {
+                width: 95%;
+                margin: 0 auto;
+            }
+            section.courses {
+                width: 68%;
+            }
+            aside {
+                width: 28%;
+            }
+            nav li {
+                margin-right: 20px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            section.courses, aside {
+                float: none;
+                width: 100%;
+                border-right: none;
+                padding: 10px;
+            }
+            aside {
+                padding-left: 10px;
+            }
+            figure {
+                float: none;
+                margin: 10px auto;
+                display: block;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <h1></h1>
-            <nav>
-                <ul>
-                    <li><a href="1сайт кофейня.html" class="current">Главная</a></li>
-                    <li><a href="2кафе.html">Кафе</a></li>
-                    <li><a href="3меню.html">Меню</a></li>
-                    <li><a href="4о нас.html">О нас</a></li>
-                    <li><a href="5контакты.html">Контакты</a></li>
-                </ul>
-            </nav>
-        </header>
+<div class="wrapper">
+    <header>
+        <h1>Кофейня Coffee Travelers</h1>
+        <nav aria-label="Главное меню">
+            <ul>
+                <li><a href="1сайт кофейня.html" class="current" aria-current="page">Главная</a></li>
+                <li><a href="2кафе.html">Кафе</a></li>
+                <li><a href="3меню.html">Меню</a></li>
+                <li><a href="4о нас.html">О нас</a></li>
+                <li><a href="5контакты.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!-- семантический контейнер для основного содержимого -->
         <section class="courses">
             <article>
                 <figure>
-                    <img width="200px" height="200px" src="images/vladelzi.jpg" alt="Bok Choi"/>
+                    <img src="images/vladelzi.jpg" alt="Новые владельцы кофейни — улыбающиеся бариста" width="200" height="200">
+                    <!-- width/height заданы для устойчивости макета -->
+                    <figcaption>Команда Coffee Travelers</figcaption>
                 </figure>
                 <hgroup>
-                    <h2>Новые Собственники 2-ух наших кофейн</h2>
+                    <h2>Новые Собственники 2-ух наших кофеен</h2>
                 </hgroup>
-                <p>Приветствуем и радуем</p>
+                <p>Приветствуем и радуем — теперь у нас два уютных пространства, где кофе становится искусством. Знакомьтесь, наши вдохновители!</p>
             </article>
+
             <article>
                 <figure>
-                    <img width="200px" height="230px" src="images/Coffee.jpg" alt="Соус Терияки"/>
+                    <img src="images/Coffee.jpg" alt="Карамельное Макиато — пенка с карамельным узором" width="200" height="230">
+                    <figcaption>Хит месяца</figcaption>
                 </figure>
                 <hgroup>
                     <h2>Самый популярный кофе месяца</h2>
                     <h3>Карамельное Макиато</h3>
                 </hgroup>
-                <p>Состав: Молоко ультрапастеризированное (75%), жидкий экстракт кофе Coffe Travelers(вода, кофе(Coffe Travelers)-обжаренный молотый сорт арабика)(20%), сахар, ароматизатор (вкус "Карамель")</p>
+                <p>Состав: Молоко ультрапастеризированное (75%), жидкий экстракт кофе Coffee Travelers (вода, кофе обжаренный молотый сорт арабика) (20%), сахар, ароматизатор (вкус "Карамель"). Наслаждайтесь нежной карамельной нотой!</p>
             </article>
         </section>
+
         <aside>
-            <section class="popular-recipes">
-                <h3>Популярные рецепты Кофе</h3>
+            <section class="popular-recipes" aria-labelledby="popular-heading">
+                <h3 id="popular-heading">Популярные рецепты кофе</h3>
                 <a href="6Флэт-Уайт.html">Флэт-Уайт</a>
                 <a href="7Каппучино.html">Каппучино</a>
                 <a href="8Раф.html">Раф</a>
                 <a href="9Латте.html">Латте</a>
             </section>
+
             <section class="contact-details">
                 <h2>Адрес</h2>
-                <p>Кафе "Coffe Travelers"<br/>
-                    Москва<br/>
+                <address> <!-- семантический тег для контактной информации -->
+                    <p>Кафе "Coffee Travelers"<br>
+                    Москва<br>
                     Новый Арбат, 49</p>
+                </address>
             </section>
         </aside>
-        <footer>
-            &copy; 2022 Кафе "Coffe Travelers"
-        </footer>
-    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Кафе "Coffee Travelers" — Все права защищены.</p>
+        <!-- год обновлён на актуальный, но можно оставить и 2022 -->
+    </footer>
+</div>
 </body>
 </html>
