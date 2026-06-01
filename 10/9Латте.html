@@ -1,53 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-<title>Изображения</title>
-<style type="text/css">
-body {
-color: #665544;
-background-color: #d4d0c6;
-background-image: url("images/LATTE.jpg");
-font-family: Georgia, "Times New Roman", serif;
-text-align: center;
-background-repeat: no-repeat;
-background-size: 100% 1200%;}
-.wrapper {
-width: 720px;
-margin: 0px auto;}
-.header {
-margin: 40px 0px 20px 0px;}
-.entry {
-width: 220px;
-float: left;
-margin: 10px;
-height: 198px;
-background-image: url("images/shadow.png");
-background-repeat: no-repeat;
-background-position: bottom;}
-figure {
-display: block;
-width: 202px;
-height: 170px;
-background-color: #e7e3d8;
-padding: 9px;
-margin:0px;
-text-align: left;}
-figure img {
-width: 200px;
-height: 150px;
-border: 1px solid #d6d6d6;}
-figcaption {
-background-image: url("images/icon.png");
-padding-left: 20px;
-background-repeat: no-repeat;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Флэт Уайт — Кофейня Traveler's Coffee</title>
+    <style type="text/css">
+        /* Сброс базовых отступов */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #665544;
+            background-color: #d4d0c6;
+            background-image: url("images/FLATUAIGHT.jpg");
+            font-family: Georgia, "Times New Roman", Times, serif;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-size: cover;             /* вместо 100% 1200% — корректное покрытие */
+            background-position: center center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .wrapper {
+            width: 720px;
+            margin: 0 auto;
+            max-width: 95%;                  /* адаптивность */
+        }
+
+        /* clearfix для очистки потока после float-элементов */
+        .wrapper::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .header {
+            margin: 40px 0 20px 0;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #4a3b2c;
+            background: rgba(255, 255, 255, 0.7);
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 40px;
+            backdrop-filter: blur(2px);
+        }
+
+        .entry {
+            width: 220px;
+            float: left;
+            margin: 10px;
+            height: 198px;
+            background-image: url("images/shadow.png");
+            background-repeat: no-repeat;
+            background-position: bottom;
+            transition: transform 0.25s ease;
+        }
+
+        .entry:hover {
+            transform: translateY(-5px);
+        }
+
+        figure {
+            display: block;
+            width: 202px;
+            height: 170px;
+            background-color: #e7e3d8;
+            padding: 9px;
+            margin: 0;
+            text-align: left;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        figure img {
+            width: 100%;                     /* адаптивно внутри figure */
+            height: 150px;
+            border: 1px solid #d6d6d6;
+            object-fit: cover;              /* аккуратно вписывает изображение */
+            display: block;
+        }
+
+        figcaption {
+            background-image: url("images/icon.png");
+            padding-left: 20px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 14px 14px;
+            font-size: 0.85rem;
+            margin-top: 6px;
+            color: #55483c;
+        }
+
+        /* Исправлено: закрывающий </figure> был лишним — убираем ошибку */
+        /* адаптивность для планшетов и телефонов */
+        @media (max-width: 740px) {
+            .wrapper {
+                width: 100%;
+            }
+            .entry {
+                float: none;
+                margin: 15px auto;
+                display: block;
+            }
+            figure {
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="wrapper">
-<div class="header">
-<p>.</p>
-</figure>
-</div>
-</div>
+    <main class="wrapper">           <!-- main вместо div для семантики -->
+        <header class="header">      <!-- header вместо div -->
+            <p>☕ Флэт Уайт — любимый кофе гурманов ☕</p>
+            <!-- Точка была заменена на осмысленный текст о кофе -->
+        </header>
+
+        <!-- Галерея изображений (восстановлена структура) -->
+        <div class="gallery" style="display: flow-root;">
+            <div class="entry">
+                <figure>
+                    <img src="images/flat-white-01.jpg" alt="Флэт Уайт с латте-арт" loading="lazy">
+                    <figcaption>Нежный вкус</figcaption>
+                </figure>
+            </div>
+            <div class="entry">
+                <figure>
+                    <img src="images/flat-white-02.jpg" alt="Приготовление Флэт Уайт" loading="lazy">
+                    <figcaption>Идеальная текстура</figcaption>
+                </figure>
+            </div>
+            <div class="entry">
+                <figure>
+                    <img src="images/flat-white-03.jpg" alt="Флэт Уайт в чашке" loading="lazy">
+                    <figcaption>Наслаждение</figcaption>
+                </figure>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
