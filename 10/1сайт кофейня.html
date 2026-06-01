@@ -168,6 +168,18 @@ footer{
     padding:10px 20px;
 }
 
+.visually-hidden{
+    position:absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+}
+
 @media (max-width:960px){
     .wrapper{
         width:95%;
@@ -224,7 +236,11 @@ footer{
 
 <main>
 
-<section class="courses">
+<section class="courses" aria-labelledby="courses-heading">
+
+    <h2 id="courses-heading" class="visually-hidden">
+        Osnovnoy_kontent
+    </h2>
 
     <article>
         <figure>
@@ -280,8 +296,8 @@ footer{
         <a href="9Latte.html">Латте</a>
     </section>
 
-    <section class="contact-details">
-        <h2>Adres</h2>
+    <section class="contact-details" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Adres</h2>
 
         <address>
             Kafe_Coffee_Travelers<br>
