@@ -2,25 +2,42 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Это заголовок страницы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>О компании Coffee Travelers</title>
     <style type="text/css">
+        /* Сброс базовых отступов */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             color: #665544;
             background-color: #d4d0c6;
-            background-image: url("images/");
-            font-family: Georgia, "Times New Roman", serif;
+            background-image: url("images/");  /* путь оставлен как есть — требуется изображение */
+            font-family: Georgia, "Times New Roman", Times, serif;
             text-align: center;
             background-repeat: no-repeat;
-            background-size: 100% 100%;
+            background-size: cover;             /* вместо 100% 100% — корректное покрытие */
+            background-position: center center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
+
         .wrapper {
             width: 720px;
-            margin: 0px auto;
+            margin: 0 auto;
+            max-width: 100%;
         }
+
         .header {
-            margin: 40px 0px 20px 0px;
+            margin: 40px 0 20px 0;
         }
+
         .entry {
             width: 220px;
             float: left;
@@ -30,36 +47,82 @@
             background-repeat: no-repeat;
             background-position: bottom;
         }
+
         figure {
             display: block;
             width: 202px;
             height: 170px;
             background-color: #e7e3d8;
             padding: 9px;
-            margin: 0px;
+            margin: 0;
             text-align: center;
         }
+
         figure img {
             width: 200px;
             height: 150px;
             border: 1px solid #d6d6d6;
         }
+
         figcaption {
             background-image: url("images/icon.png");
             padding-left: 20px;
             background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 14px 14px;
         }
-        p {
+
+        /* Основной текст — семантически правильный блок */
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Исправлено: h2 не может быть внутри p — это ошибка валидации */
+        .about-text h2 {
             text-align: center;
-            width: 600px;
-            margin: 300px auto 300px auto;
             font-weight: normal;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: #4a3b2c;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(3px);
+            margin: 0;
+        }
+
+        /* Медиа-запрос для мобильных устройств */
+        @media (max-width: 768px) {
+            .about-text h2 {
+                font-size: 1rem;
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <p>
+    <!-- Удалён неправильный <p> вокруг <h2> — это невалидная структура -->
+    <main class="about-text">
         <h2>Компания по продаже кофе, основанная в Новосибирске выходцем из США Кристофером Майклом Тара-Брауном. Впоследствии, Кристофер развивал бизнес совместно с россиянином Пириевым Анваром. Компания имеет сеть кофеен, собственное обжарочное производство. Управляющая компания - ООО «Трэвэлерс кофе Интернэшнл». Главный офис расположен в Москве, Россия</h2>
-    </p>
+    </main>
+
+    <!-- Остальные элементы (.wrapper, .header, .entry, figure, figcaption) оставлены в коде,
+         но скрыты, так как в исходной версии они не использовались. 
+         Если нужно их отобразить — раскомментируйте блок ниже -->
+    <!--
+    <div class="wrapper">
+        <div class="header">
+            <p>Заголовок</p>
+        </div>
+        <div class="entry">
+            <figure>
+                <img src="images/print-01.jpg" alt="Описание">
+                <figcaption>Подпись</figcaption>
+            </figure>
+        </div>
+    </div>
+    -->
 </body>
 </html>
