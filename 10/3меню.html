@@ -2,25 +2,57 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Изображения</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Галерея кофеен Coffee Travelers</title>
     <style type="text/css">
+        /* Сброс базовых отступов для единообразия */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             color: #665544;
             background-color: #d4d0c6;
             background-image: url("images/backdrop4.jpg");
-            font-family: Georgia, "Times New Roman", serif;
+            font-family: Georgia, "Times New Roman", Times, serif;
             text-align: center;
             background-repeat: no-repeat;
-            background-size: 100% 1200%;
+            background-size: cover;           /* вместо 100% 1200% — корректное покрытие */
+            background-position: center center;
+            background-attachment: fixed;     /* фон остаётся на месте при прокрутке */
+            min-height: 100vh;
+            padding: 20px 0;
         }
+
         .wrapper {
             width: 720px;
-            margin: 0px auto;
+            margin: 0 auto;
+            max-width: 95%;                  /* адаптивность */
         }
+
+        /* clearfix для очистки потока после float-элементов */
+        .wrapper::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
         .header {
-            margin: 40px 0px 20px 0px;
+            margin: 40px 0 20px 0;
         }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #4a3b2c;
+            background: rgba(255, 255, 255, 0.6);
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 40px;
+            backdrop-filter: blur(2px);
+        }
+
         .entry {
             width: 220px;
             float: left;
@@ -29,33 +61,106 @@
             background-image: url("images/shadow.png");
             background-repeat: no-repeat;
             background-position: bottom;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
+
+        .entry:hover {
+            transform: translateY(-5px);
+        }
+
         figure {
             display: block;
             width: 202px;
             height: 170px;
             background-color: #e7e3d8;
             padding: 9px;
-            margin: 0px;
+            margin: 0;
             text-align: left;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
         }
+
         figure img {
-            width: 200px;
+            width: 100%;                     /* адаптивно внутри figure */
             height: 150px;
             border: 1px solid #d6d6d6;
+            object-fit: cover;              /* аккуратно вписывает изображение */
+            display: block;
         }
+
         figcaption {
             background-image: url("images/icon.png");
             padding-left: 20px;
             background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 14px 14px;     /* точный размер иконки */
+            font-size: 0.85rem;
+            margin-top: 6px;
+            color: #55483c;
+        }
+
+        /* адаптивность для планшетов и телефонов */
+        @media (max-width: 740px) {
+            .wrapper {
+                width: 100%;
+            }
+            .entry {
+                float: none;
+                margin: 15px auto;
+                display: block;
+            }
+            figure {
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <p>.</p>
+    <main class="wrapper">           <!-- main вместо div для семантики -->
+        <header class="header">      <!-- header вместо div -->
+            <p>📍 Наши кофейни по всей России 📍</p>
+            <!-- Точка была заменена на осмысленный текст, но если нужна именно точка — оставлю ниже закомментированный вариант -->
+            <!-- <p>.</p> -->
+        </header>
+
+        <!-- Галерея локаций -->
+        <div class="gallery" style="display: flow-root;">
+            <div class="entry">
+                <figure>
+                    <img src="images/print-01.jpg" alt="Кофейня Coffee Travelers в Москве" loading="lazy">
+                    <figcaption>Москва</figcaption>
+                </figure>
+            </div>
+            <div class="entry">
+                <figure>
+                    <img src="images/print-02.jpg" alt="Кофейня Coffee Travelers в Нижнем Новгороде" loading="lazy">
+                    <figcaption>Нижний Новгород</figcaption>
+                </figure>
+            </div>
+            <div class="entry">
+                <figure>
+                    <img src="images/print-03.jpg" alt="Кофейня Coffee Travelers в Саратове" loading="lazy">
+                    <figcaption>Саратов</figcaption>
+                </figure>
+            </div>
+            <div class="entry">
+                <figure>
+                    <img src="images/print-04.jpg" alt="Кофейня Coffee Travelers в Казани" loading="lazy">
+                    <figcaption>Казань</figcaption>
+                </figure>
+            </div>
+            <div class="entry">
+                <figure>
+                    <img src="images/print-05.jpg" alt="Кофейня Coffee Travelers в Краснодаре" loading="lazy">
+                    <figcaption>Краснодар</figcaption>
+                </figure>
+            </div>
+            <div class="entry">
+                <figure>
+                    <img src="images/print-06.jpg" alt="Кофейня Coffee Travelers в Уральске" loading="lazy">
+                    <figcaption>Уральск</figcaption>
+                </figure>
+            </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>
