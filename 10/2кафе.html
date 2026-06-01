@@ -2,6 +2,165 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Кофейни Coffee Travelers — Наши локации</title>
+    <style type="text/css">
+        /* Сброс базовых отступов для единообразия */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #665544;
+            background-color: #d4d0c6;
+            background-image: url("images/backdrop.jpg");
+            font-family: Georgia, "Times New Roman", Times, serif;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-size: cover;           /* вместо 100% 185% — корректное покрытие */
+            background-position: center center;
+            min-height: 100vh;               /* фон на всю высоту */
+            padding: 20px 0;
+        }
+
+        .wrapper {
+            width: 720px;
+            margin: 0 auto;
+            max-width: 95%;                  /* адаптивность */
+        }
+
+        .header {
+            margin: 40px 0 20px 0;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            background: rgba(255,255,255,0.5); /* лёгкая полупрозрачность для читаемости */
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 30px;
+        }
+
+        /* clearfix для очистки потока после float-элементов */
+        .wrapper::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .entry {
+            width: 220px;
+            float: left;
+            margin: 10px;
+            height: 198px;
+            background-image: url("images/shadow.png");
+            background-repeat: no-repeat;
+            background-position: bottom;
+            transition: transform 0.2s ease; /* лёгкая анимация при наведении */
+        }
+
+        .entry:hover {
+            transform: translateY(-3px);
+        }
+
+        figure {
+            display: block;
+            width: 202px;
+            height: 170px;
+            background-color: #e7e3d8;
+            padding: 9px;
+            margin: 0;
+            text-align: left;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        figure img {
+            width: 100%;                     /* адаптивно внутри figure */
+            height: 150px;
+            border: 1px solid #d6d6d6;
+            object-fit: cover;              /* аккуратно вписывает изображение */
+            display: block;                 /* убирает лишний отступ снизу */
+        }
+
+        figcaption {
+            background-image: url("images/icon.png");
+            padding-left: 20px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 16px 16px;     /* точный размер иконки */
+            font-size: 0.85rem;
+            margin-top: 6px;
+        }
+
+        /* адаптивность для планшетов и телефонов */
+        @media (max-width: 740px) {
+            .wrapper {
+                width: 100%;
+            }
+            .entry {
+                float: none;
+                margin: 15px auto;
+                display: block;
+            }
+            figure {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="wrapper">           <!-- main вместо div для семантики -->
+        <header class="header">      <!-- header вместо div -->
+            <p>✨ Здесь представлены все места, где находятся наши кафе ✨</p>
+        </header>
+
+        <!-- Галерея локаций — семантически верно использовать role=group или просто список -->
+        <div class="gallery" style="display: flow-root;"> <!-- flow-root для очистки float без дополнительных классов -->
+            <div class="entry">
+                <figure>
+                    <img src="images/print-01.jpg" alt="Уютное кафе в Москве" loading="lazy">
+                    <figcaption>Москва</figcaption>
+                </figure>
+            </div>
+            <div class="entry">
+                <figure>
+                    <img src="images/print-02.jpg" alt="Кофейня в Нижнем Новгороде" loading="lazy">
+                    <figcaption>Нижний Новгород</figcaption>      <!-- исправлено "Нижний новгород" → "Нижний Новгород" -->
+                </figure>
+            </div>
+            <div class="entry">
+                <figure>
+                    <img src="images/print-03.jpg" alt="Кофейня в Саратове" loading="lazy">
+                    <figcaption>Саратов</figcaption>
+                </figure>
+            </div>
+            <div class="entry">
+                <figure>
+                    <img src="images/print-04.jpg" alt="Кофейня в Казани" loading="lazy">
+                    <figcaption>Казань</figcaption>
+                </figure>
+            </div>
+            <div class="entry">
+                <figure>
+                    <img src="images/print-05.jpg" alt="Кофейня в Краснодаре" loading="lazy">
+                    <figcaption>Краснодар</figcaption>
+                </figure>
+            </div>
+            <div class="entry">
+                <figure>
+                    <img src="images/print-06.jpg" alt="Кофейня в Уральске" loading="lazy">
+                    <figcaption>Уральск</figcaption>
+                </figure>
+            </div>
+        </div>
+    </main>
+</body>
+</html><!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Изображения</title>
     <style type="text/css">
