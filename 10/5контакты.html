@@ -2,25 +2,40 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Это заголовок страницы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Контакты Traveler's Coffee</title>
     <style type="text/css">
+        /* Сброс базовых отступов */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             color: #665544;
             background-color: #d4d0c6;
-            background-image: url("images/");
-            font-family: Georgia, "Times New Roman", serif;
+            background-image: url("images/");  /* путь оставлен как есть — требуется изображение */
+            font-family: Georgia, "Times New Roman", Times, serif;
             text-align: center;
             background-repeat: no-repeat;
-            background-size: 100% 100%;
+            background-size: cover;             /* вместо 100% 100% — корректное покрытие */
+            background-position: center center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 40px 20px;
         }
+
         .wrapper {
             width: 720px;
-            margin: 0px auto;
+            margin: 0 auto;
+            max-width: 100%;
         }
+
         .header {
-            margin: 40px 0px 20px 0px;
+            margin: 40px 0 20px 0;
         }
+
         .entry {
             width: 220px;
             float: left;
@@ -30,81 +45,185 @@
             background-repeat: no-repeat;
             background-position: bottom;
         }
+
         figure {
             display: block;
             width: 202px;
             height: 170px;
             background-color: #e7e3d8;
             padding: 9px;
-            margin: 0px;
+            margin: 0;
             text-align: left;
         }
+
         figure img {
             width: 200px;
             height: 150px;
             border: 1px solid #d6d6d6;
         }
+
         figcaption {
             background-image: url("images/icon.png");
             padding-left: 20px;
             background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 14px 14px;
         }
-        p {
-            text-align: center;
-            width: 600px;
-            margin: 180px auto 180px auto;
+
+        /* Основной контент — контактная информация */
+        .contacts {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 24px;
+            padding: 30px;
+            text-align: left;
+            backdrop-filter: blur(2px);
+        }
+
+        /* Исправлено: h2 не может быть внутри p — это ошибка валидации */
+        .contacts h2 {
             font-weight: normal;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #4a3b2c;
+            margin: 0;
+            white-space: pre-line;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+
+        /* Стили для оформления контактных блоков */
+        .contact-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 3px solid #de6581;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 12px;
+        }
+
+        .contact-title {
+            font-weight: bold;
+            color: #985d6a;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        hr {
+            margin: 15px 0;
+            border: none;
+            border-top: 1px solid #d4d0c6;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .contacts {
+                padding: 20px;
+            }
+            .contacts h2 {
+                font-size: 0.85rem;
+                line-height: 1.6;
+            }
         }
     </style>
 </head>
 <body>
-    <p>
-        <h2>+7 (495) 127-05-57
-            Москва
-            8 (800) 3500-183
-            Регионы
-            +7 (383) 202-17-03
-            Новосибирск
-            Московский офис
-            (Центральный регион)
-            125047, Россия, г. Москва,
-            ул. 2-я Тверская-Ямская 40/3,
-            3 этаж, офис 306
-            Операционный департамент
-            ДИРЕКТОР ПО ОПЕРАЦИОННОЙ ДЕЯТЕЛЬНОСТИ И ФРАНЧАЙЗИНГУ
-            Дмитрий Варакин
-            d.varakin@travelers-coffee.com
-            Департамент продаж (опт и розница)
-            sales.msk@travelers-coffee.com
-            МЕНЕДЖЕР ОТДЕЛА ПРОДАЖ
-            Лаура Велиева
-            velieva.l@travelers-coffee.com
-            Новосибирский офис
-            (Западно-Сибирский регион)
-            630099, Россия,
-            г. Новосибирск,
-            ул. Трудовая, дом 3
-            ДИРЕКТОР РЕГИОНАЛЬНОГО РАЗВИТИЯ
-            Евгений Молчанов
-            salesdir@travelers-coffee.com
-            РУКОВОДИТЕЛЬ СЕТЕВОГО НАПРАВЛЕНИЯ
-            Владислав Вашерук
-            vasheruk@travelers-coffee.com
-            МЕНЕДЖЕР ПО ЛОГИСТИКЕ
-            Анастасия Джунгурова
-            nsk.zakaz@travelers-coffee.com
-            МЕНЕДЖЕР ПО ЗАКУПКАМ
-            Юлия Косарева
-            kosareva.yu@travelers-coffee.com
-            Сервисное обслуживание предоставляет компания ООО "МП-Трейд",
-            официальный партнер  Traveler's Coffee
-            8-495-133-62-54
-            8-495-127-04-75
-            service@melitta-professional.ru
-            melitta-professional.ru
-            info@travelers-coffee.com
-            Отзывы и предложения
-            https://travelers-coffee.com/contacts</h2>
-    </p>
+    <!-- Исправлено: убран <p> вокруг <h2> — это невалидная структура -->
+    <main class="contacts">
+        <h2>
+            <div class="contact-section">
+                <strong>📞 Телефоны:</strong><br>
+                +7 (495) 127-05-57 — Москва<br>
+                8 (800) 3500-183 — Регионы<br>
+                +7 (383) 202-17-03 — Новосибирск
+            </div>
+
+            <div class="contact-section">
+                <strong>📍 Московский офис (Центральный регион)</strong><br>
+                125047, Россия, г. Москва,<br>
+                ул. 2-я Тверская-Ямская 40/3,<br>
+                3 этаж, офис 306
+            </div>
+
+            <div class="contact-section">
+                <strong>👔 Операционный департамент</strong><br>
+                ДИРЕКТОР ПО ОПЕРАЦИОННОЙ ДЕЯТЕЛЬНОСТИ И ФРАНЧАЙЗИНГУ<br>
+                Дмитрий Варакин<br>
+                d.varakin@travelers-coffee.com
+            </div>
+
+            <div class="contact-section">
+                <strong>💰 Департамент продаж (опт и розница)</strong><br>
+                sales.msk@travelers-coffee.com<br>
+                МЕНЕДЖЕР ОТДЕЛА ПРОДАЖ<br>
+                Лаура Велиева<br>
+                velieva.l@travelers-coffee.com
+            </div>
+
+            <div class="contact-section">
+                <strong>📍 Новосибирский офис (Западно-Сибирский регион)</strong><br>
+                630099, Россия,<br>
+                г. Новосибирск,<br>
+                ул. Трудовая, дом 3
+            </div>
+
+            <div class="contact-section">
+                <strong>📈 ДИРЕКТОР РЕГИОНАЛЬНОГО РАЗВИТИЯ</strong><br>
+                Евгений Молчанов<br>
+                salesdir@travelers-coffee.com
+            </div>
+
+            <div class="contact-section">
+                <strong>🏪 РУКОВОДИТЕЛЬ СЕТЕВОГО НАПРАВЛЕНИЯ</strong><br>
+                Владислав Вашерук<br>
+                vasheruk@travelers-coffee.com
+            </div>
+
+            <div class="contact-section">
+                <strong>🚚 МЕНЕДЖЕР ПО ЛОГИСТИКЕ</strong><br>
+                Анастасия Джунгурова<br>
+                nsk.zakaz@travelers-coffee.com
+            </div>
+
+            <div class="contact-section">
+                <strong>🛒 МЕНЕДЖЕР ПО ЗАКУПКАМ</strong><br>
+                Юлия Косарева<br>
+                kosareva.yu@travelers-coffee.com
+            </div>
+
+            <div class="contact-section">
+                <strong>🔧 Сервисное обслуживание</strong><br>
+                Предоставляет компания ООО "МП-Трейд",<br>
+                официальный партнер Traveler's Coffee<br>
+                8-495-133-62-54<br>
+                8-495-127-04-75<br>
+                service@melitta-professional.ru<br>
+                melitta-professional.ru
+            </div>
+
+            <div class="contact-section">
+                <strong>📧 Общие контакты</strong><br>
+                info@travelers-coffee.com<br>
+                Отзывы и предложения<br>
+                <a href="https://travelers-coffee.com/contacts" target="_blank" rel="noopener noreferrer">https://travelers-coffee.com/contacts</a>
+            </div>
+        </h2>
+    </main>
+
+    <!-- Остальные элементы (.wrapper, .header, .entry, figure, figcaption) оставлены в коде,
+         но скрыты, так как в исходной версии они не использовались.
+         Если нужно их отобразить — раскомментируйте блок ниже -->
+    <!--
+    <div class="wrapper">
+        <div class="header">
+            <p>Заголовок</p>
+        </div>
+        <div class="entry">
+            <figure>
+                <img src="images/print-01.jpg" alt="Описание">
+                <figcaption>Подпись</figcaption>
+            </figure>
+        </div>
+    </div>
+    -->
 </body>
 </html>
