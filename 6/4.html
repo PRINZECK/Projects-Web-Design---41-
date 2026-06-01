@@ -1,67 +1,64 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-<title>Формы</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы</title>
 </head>
 <body>
-<form action="http://examle.com/review.php" method="get">
-<fieldset>
-<legend>Данные Пользователя</legend>
-<label>Имя:
-<input type="text" name="name" size="30" maxlength="100" />
-</label>
-<br />
-<label>
-email:
-<input type="text" name="email" size="30" maxlength="100" />
-</label>
-<br />
-</fieldset>
-<br />
-<fieldset>
-<legend>
-Ваше мнение:
-</legend>
-<p>
-<label for="hear-about">
-Как вы узнали он нас?
-</label>
-<select name="referrer" id="hear-about">
-<option value="google">Google</option>
-<option value="friend">От друзей</option>
-<option value="advert">Реклама</option>
-<option value="other">Другое</option>
-</select>
-</p>
-<p>
-Посетите ли вы на сайт снова?
-<br />
-<label>
-<input type = "radio" name="rating" value="yes" />
-да
-</label>
-<label>
-<input type = "radio" name="rating" value="no" />
-нет
-</label>
-<label>
-<input type = "radio" name="rating" value="maybe" />
-воможно
-</label>
-</p>
-<p>
-<label for="comments">
-коментариий
-</label>
-<br />
-<textarea rows="4" cols="40" id="comments" ></textarea>
-</p>
-<label>
-<input type="checkbox" name="subscribe" checked="checked"/>
-Я хочу получать рассылку с новостями сайта
-</label>
-<br />
-<input type="submit" value="Отправить отзыв" />
-</fieldset>
-</form>
-</body> 
+    <form action="http://examle.com/review.php" method="get">
+        <fieldset>
+            <legend>Данные Пользователя</legend>
+            <label>Имя:
+            <input type="text" name="name" size="30" maxlength="100">
+            </label>
+            <br>
+            <label>
+            email:
+            <input type="text" name="email" size="30" maxlength="100">
+            </label>
+            <br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Ваше мнение:</legend>
+            <p>
+                <label for="hear-about">Как вы узнали он нас?</label>
+                <select name="referrer" id="hear-about">
+                    <option value="google">Google</option>
+                    <option value="friend">От друзей</option>
+                    <option value="advert">Реклама</option>
+                    <option value="other">Другое</option>
+                </select>
+            </p>
+            <p>
+                Посетите ли вы на сайт снова?
+                <br>
+                <label>
+                <input type="radio" name="rating" value="yes">
+                да
+                </label>
+                <label>
+                <input type="radio" name="rating" value="no">
+                нет
+                </label>
+                <label>
+                <input type="radio" name="rating" value="maybe">
+                воможно
+                </label>
+            </p>
+            <p>
+                <label for="comments">коментариий</label>
+                <br>
+                <textarea rows="4" cols="40" id="comments"></textarea>
+            </p>
+            <label>
+            <input type="checkbox" name="subscribe" checked="checked">
+            Я хочу получать рассылку с новостями сайта
+            </label>
+            <br>
+            <input type="submit" value="Отправить отзыв">
+        </fieldset>
+    </form>
+</body>
 </html>

@@ -1,46 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-<title>Выравнивание элементов управления формой - Проблема</title>
-<style type="text/css">
-body{
-font-family:arial, Verdana, sans-serif;}
-div {
-border-bottom: 1px solid #efefef;
-margin: 10 px;
-padding-bottom: 10 px;
-width: 260 px;}
-.title {
-float: left;
-width: 100px;
-text-align: right;
-padding-right: 10 px;}
-.radio-buttons label{
-float:none;}
-.sumbit {
-text-align: right;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выравнивание элементов управления формой - Проблема</title>
+    <style type="text/css">
+        body {
+            font-family: arial, Verdana, sans-serif;
+        }
+        div {
+            border-bottom: 1px solid #efefef;
+            margin: 10px;
+            padding-bottom: 10px;
+            width: 260px;
+        }
+        .title {
+            float: left;
+            width: 100px;
+            text-align: right;
+            padding-right: 10px;
+        }
+        .radio-buttons label {
+            float: none;
+        }
+        .submit {
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
-<for action="example.php" method="post">
-<div>
-<label for="name" class="title">Имя:</label>
-<input type="text" id="name" name="name" />
-</div>
-<div>
-<label for="email" class="title">Email:</label>
-<input type="email" id="email" name="email" />
-</div>
-<div>
-<span class="title">Пол:</span>
-<input type="radio" name="gender" id="male" value="M" />
-<label for="male">М</label>
-<input type="radio" name="gender" id="female" value="F" />
-<label for="email" class="title">Ж</label><br />
-</div>
-<div>
-<input type="sumbit" value="Регистрация" id="sumbit" />
-</div>
-</form>
+    <form action="example.php" method="post">
+        <div>
+            <label for="name" class="title">Имя:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="email" class="title">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <span class="title">Пол:</span>
+            <input type="radio" name="gender" id="male" value="M">
+            <label for="male">М</label>
+            <input type="radio" name="gender" id="female" value="F">
+            <label for="female" class="title">Ж</label><br>
+        </div>
+        <div>
+            <input type="submit" value="Регистрация" id="submit">
+        </div>
+    </form>
 </body>
 </html>
