@@ -1,47 +1,98 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-<title>Это заголовок страницы</title>
-<style type="text/css">
-body {
-color: #665544;
-background-color: #d4d0c6;
-background-image: url("images/backdrop.jpg");
-font-family: Georgia, "Times New Roman", serif;
-text-align: center;
-background-repeat: no-repeat;
-background-size: 100% 1300%;}
-.wrapper {
-width: 720px;
-margin: 0px auto;}
-.header {
-margin: 40px 0px 20px 0px;}
-.entry {
-width: 220px;
-float: left;
-margin: 10px;
-height: 198px;
-background-image: url("images/shadow.png");
-background-repeat: no-repeat;
-background-position: bottom;}
-figure {
-display: block;
-width: 202px;
-height: 170px;
-background-color: #e7e3d8;
-padding: 9px;
-margin:0px;
-text-align: left;}
-figure img {
-width: 200px;
-height: 150px;
-border: 1px solid #d6d6d6;}
-figcaption {
-background-image: url("images/icon.png");
-padding-left: 20px;
-background-repeat: no-repeat;}
-</style>
-<body>
-<h1> Компания по продаже кофе, основанная в Новосибирске выходцем из США Кристофером Майклом Тара-Брауном. Впоследствии, Кристофер развивал бизнес совместно с россиянином Пириевым Анваром. Компания имеет сеть кофеен, собственное обжарочное производство. Управляющая компания - ООО «Трэвэлерс кофе Интернэшнл». Главный офис расположен в Москве, Россия</h1>
-</body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Компания по продаже кофе</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: #665544;
+            background-color: #d4d0c6;
+            background-image: url("images/backdrop.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        figure {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        figure img {
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #d6d6d6;
+            border-radius: 8px;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            padding-left: 24px;
+            background: url("images/icon.png") no-repeat left center;
+            display: inline-block;
+        }
+    </style>
 </head>
+
+<body>
+    <main class="container">
+        <section class="content">
+            <h1>Компания по продаже кофе</h1>
+
+            <p>
+                Компания по продаже кофе, основанная в Новосибирске
+                выходцем из США Кристофером Майклом Тара-Брауном.
+                Впоследствии Кристофер развивал бизнес совместно
+                с россиянином Пириевым Анваром.
+            </p>
+
+            <p>
+                Компания имеет сеть кофеен, собственное обжарочное
+                производство. Управляющая компания —
+                ООО «Трэвэлерс кофе Интернэшнл».
+                Главный офис расположен в Москве, Россия.
+            </p>
+
+            <figure>
+                <img src="images/coffee.jpg" alt="Кофейня компании">
+                <figcaption>Сеть кофеен компании</figcaption>
+            </figure>
+        </section>
+    </main>
+</body>
 </html>
